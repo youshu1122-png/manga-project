@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 完整 SEO Meta Tags -->
+    <title>老城裡的漫時光：臺中國家漫畫博物館專案企劃展演</title>
+    <meta name="description" content="國家漫畫博物館期中企劃：結合歷史空間與臺灣漫畫文化，為文青美學體驗者打造兼具心靈療癒、在地文化記憶與質感生活實踐的沉浸式美學場域。">
+    <meta name="keywords" content="國家漫畫博物館, 老城裡的漫時光, 臺中刑務所, SWOT分析, STP定位, 漫活美學">
+    <meta name="author" content="李友書 (D1422211) - 乙四專案小組">
+    
+    <!-- Open Graph 標籤 -->
+    <meta property="og:title" content="老城裡的漫時光：國家漫畫博物館企劃">
+    <meta property="og:description" content="乙四期中企劃專案網頁 presentation">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* CSS Reset & 基礎設定 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c0392b;  /* 經典和風紅 */
+            --secondary-color: #2c3e50;/* 深藍灰 */
+            --accent-bg: #fdfbf7;       /* 米白質感底色 */
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f4f6f8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px 0;
+        }
+
+        /* Navbar 頂部導覽列 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 15px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo-author {
+            font-size: 0.8rem;
+            color: #f1c40f;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-item {
+            color: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+
+        /* Grid 雙欄佈局 System (桌面端) */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 25px;
+        }
+
+        /* 側邊欄 Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-block {
+            background: var(--card-bg);
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .sidebar-block h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .sidebar-block p {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* 主分頁內容區 Page Tabs */
+        .page-tab {
+            display: none;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .page-tab.active {
+            display: block;
+        }
+
+        .hero-banner {
+            width: 100%;
+            padding: 35px 25px;
+            background: linear-gradient(135deg, #c0392b 0%, #2c3e50 100%);
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .hero-banner h1 {
+            font-size: 1.9rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-banner p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .page-tab h2 {
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--accent-bg);
+            padding-bottom: 8px;
+        }
+
+        .page-tab h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px 0;
+            font-size: 1.15rem;
+        }
+
+        /* 響應式表格 */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .data-table th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .highlight-row {
+            background-color: #fffaf0;
+        }
+
+        /* 區塊卡片 */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-card {
+            background: var(--accent-bg);
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #f0ebe1;
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+
+        .info-card p {
+            font-size: 0.88rem;
+            color: #555;
+        }
+
+        .quote-box {
+            background: var(--accent-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* Footer 頁尾 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--secondary-color);
+            color: #bdc3c7;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        /* RWD 手持裝置響應式適應 (Mobile/Tablet) */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-tab {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部導覽列 Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            老城裡的漫時光 <span>| 期中企劃</span>
+            <div class="logo-author">作者：李友書 | 組別：乙四 | 學號：D1422211</div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#summary" class="nav-item active" onclick="switchTab(event, 'summary')">專案摘要與背景</a></li>
+                <li><a href="#competitor" class="nav-item" onclick="switchTab(event, 'competitor')">競品分析</a></li>
+                <li><a href="#swot-stp" class="nav-item" onclick="switchTab(event, 'swot-stp')">SWOT 與 STP 定位</a></li>
+                <li><a href="#creative" class="nav-item" onclick="switchTab(event, 'creative')">廣告與創意腳本</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要內容區：Grid 雙欄佈局 (側邊欄 + 主分頁) -->
+    <div class="container main-layout">
+        
+        <!-- 側邊欄 Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-block" style="background: #fffaf0; border-left-color: var(--primary-color);">
+                <h3>👤 報告組別資訊</h3>
+                <p><strong>專案名稱：</strong>老城裡的漫時光</p>
+                <p><strong>組別：</strong>乙四</p>
+                <p><strong>作者：</strong>李友書</p>
+                <p><strong>學號：</strong>D1422211</p>
+            </div>
+
+            <div class="sidebar-block">
+                <h3>🏛️ 個案簡介</h3>
+                <p>前身為日治臺中刑務所官舍群與演武場。結合歷史空間與臺灣漫畫文化，致力於保存原創漫畫手稿並活化歷史建築。</p>
+            </div>
+            
+            <div class="sidebar-block">
+                <h3>🎯 定位聲明</h3>
+                <p>「為文青美學體驗者族群，打造一個兼具心靈療癒、在地文化記憶與質感生活實踐的沉浸式美學場域。」</p>
+            </div>
+        </aside>
+
+        <!-- 主內容區域 Content Area (分頁動態切換) -->
+        <main class="content-area">
+            
+            <!-- 分頁 1：專案摘要與個案背景 -->
+            <section id="tab-summary" class="page-tab active">
+                <div class="hero-banner">
+                    <h1>老城裡的漫時光</h1>
+                    <p>國家漫畫博物館 期中企劃案</p>
+                </div>
+
+                <h2>壹、專案執行摘要</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <tr>
+                            <th style="width: 25%;">現況分析</th>
+                            <td>園區仍面臨展區分散、參觀深度不足、歷史建築維護成本高，以及交通與停車不便等挑戰。</td>
+                        </tr>
+                        <tr>
+                            <th>SO 交叉分析</th>
+                            <td>得出可打造沉浸式體驗並串聯周邊觀光資源推廣臺灣漫畫，作為臺中國漫館之潛在優勢。</td>
+                        </tr>
+                        <tr>
+                            <th>市場區隔 (S)</th>
+                            <td>以心理/生活型態劃分古蹟與文化市場。</td>
+                        </tr>
+                        <tr>
+                            <th>目標市場 (T)</th>
+                            <td>鎖定「文青美學體驗者」作為目標客群，滿足其心靈療癒、品味認同與美感空間需求。</td>
+                        </tr>
+                        <tr>
+                            <th>市場定位 (P)</th>
+                            <td>運用十字定位法定位為「兼具心靈療癒、在地文化記憶與質感生活實踐的沉浸式美學場域」。</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>貳、個案背景</h2>
+                <p>國家漫畫博物館位於臺中市西區林森路一帶，前身為臺中刑務所相關歷史建築群。園區透過老屋建築、綠意環境與漫畫文化的結合，營造出兼具歷史氛圍與美學特色的空間，吸引重視生活質感、次文化及文化體驗的年輕族群。</p>
+            </section>
+
+            <!-- 分頁 2：競品分析 -->
+            <section id="tab-competitor" class="page-tab">
+                <h2>參、舊城區歷史建築競品分析</h2>
+                <p style="font-size: 0.9rem; color: #666;">選擇臺中舊城區同為日治歷史建築的三個地點進行現況與體驗服務比較：</p>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>比較項目</th>
+                                <th>國家漫畫博物館</th>
+                                <th>臺中文學館</th>
+                                <th>臺中州廳</th>
+                                <th>臺中公園</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>創建時間與歷史</th>
+                                <td>1910-1930年代<br>原日治臺中刑務所官舍群與演武場</td>
+                                <td>1932年<br>原日治警察宿舍群</td>
+                                <td>1920年<br>原日治臺中州廳，最高層級地方行政中心</td>
+                                <td>1908年<br>慶祝臺灣縱貫鐵路通車之日治公園</td>
+                            </tr>
+                            <tr>
+                                <th>建築風格</th>
+                                <td>日式傳統木造建築</td>
+                                <td>日式傳統木造建築</td>
+                                <td>西式，融合巴洛克與日式構造</td>
+                                <td>日式傳統與西洋涼亭混合</td>
+                            </tr>
+                            <tr>
+                                <th>文化精神</th>
+                                <td>大眾共鳴與在地漫畫美學</td>
+                                <td>文人脈絡與土地認同</td>
+                                <td>制度權力與城市現代化之見證</td>
+                                <td>城市記憶與歷史拼貼</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <th>導覽服務</th>
+                                <td>團體預約、定時、數位語音、QR Code導覽</td>
+                                <td>團體預約導覽、語音導覽</td>
+                                <td>定時導覽、不定期走讀導覽</td>
+                                <td>定時導覽、線上/看板自導解說</td>
+                            </tr>
+                            <tr>
+                                <th>體驗服務</th>
+                                <td>公共浴場展示區、球池大裝置、繪畫工作坊、Cosplay包場拍照</td>
+                                <td>觸控螢幕/AR互動裝置、茶藝體驗、作家講座讀書會</td>
+                                <td>特定日 VR 虛擬實境體驗、舊城走讀、傳統工藝手作</td>
+                                <td>日月湖划船體驗、大型戶外藝術季展演</td>
+                            </tr>
+                            <tr>
+                                <th>交通與停車</th>
+                                <td>公車/YouBike可達<br>無附設專用停車場</td>
+                                <td>需轉乘公車或騎YouBike<br>無附設專用停車場</td>
+                                <td>公車班次密集<br>有附設付費停車場</td>
+                                <td>公車路線密集直達<br>有附設付費停車場</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 分頁 3：SWOT 與 STP 市場定位 -->
+            <section id="tab-swot-stp" class="page-tab">
+                <h2>肆、內外部環境與 SWOT 分析</h2>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>S 優勢 (Strengths)</h4>
+                        <p>1. 全展區數位導覽方便彈性<br>2. 大眾交通工具方便抵達<br>3. 展覽動態更新率高<br>4. 次文化/Cosplay/寫真對年輕人吸引力大<br>5. 沉浸式閱讀與長效放空停留空間</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>W 劣勢 (Weaknesses)</h4>
+                        <p>1. 無附設專用停車場<br>2. 園區建物分散、動線受古蹟限制<br>3. 營運定位與目標客群重疊混淆 (漫迷 vs 觀光客)</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>O 機會 (Opportunities)</h4>
+                        <p>1. 文化部中央級預算支持<br>2. 動漫 IP 跨界號召力與周邊商機<br>3. 社群視覺打卡與 UGC 自來水流量<br>4. 戶外水池木廊具夜間觀光潛力<br>5. AR/Webtoon 智慧導覽導入</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>T 威脅 (Threats)</h4>
+                        <p>1. 短影音/手遊搶奪碎片化時間<br>2. 日韓漫畫市場強勢擠壓<br>3. 網路盜版與實體租書場域消逝<br>4. 日式木造建築之火災/地震維護成本高</p>
+                    </div>
+                </div>
+
+                <h3>SO 交叉策略</h3>
+                <div class="quote-box">
+                    <strong>1. 結合古蹟與熱門 IP 打造沉浸式觀光景點：</strong>辦理古蹟實景聯名展覽、解謎遊戲或 Cosplay 攝影祭典。<br>
+                    <strong>2. 串聯周邊打造漫畫一日生活圈：</strong>與周邊文創、在地旅宿、輕食市集合作，延長遊客停留時間與經濟效益。
+                </div>
+
+                <h2>伍~柒、STP 市場定位與十字定位</h2>
+                
+                <h3>目標客群：文青美學體驗者 (15-35 歲 Z 世代與年輕千禧世代)</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>人格特質</h4>
+                        <p>重視生活品味、審美感與空間氛圍營造，樂於探索具備歷史底蘊與藝文氣息之場域。</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>情感性價值</h4>
+                        <p>心靈療癒與放鬆（暫別喧囂）、品味認同與儀式感（展現獨特文藝生活風格）。</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>功能性價值</h4>
+                        <p>美感空間體驗（日式官舍與綠意景致）、文藝休閒選物（結合展覽、市集與特色輕食）。</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px;">十字定位分析</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>象限類型</th>
+                                <th>代表場館</th>
+                                <th>定位描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>高情感性 × 高功能性 (右上)</strong></td>
+                                <td><strong>臺中國漫館</strong></td>
+                                <td>日式古蹟空間 × 漫畫文化探索 × 漫活美學體驗，兼具知性與感性。</td>
+                            </tr>
+                            <tr>
+                                <td>低情感性 × 高功能性 (左上)</td>
+                                <td>臺中州廳</td>
+                                <td>歷史建築與行政空間見證，較偏向單向文化資產。</td>
+                            </tr>
+                            <tr>
+                                <td>高情感性 × 低功能性 (右下)</td>
+                                <td>臺中公園</td>
+                                <td>自然景觀與放鬆療癒為主，文化展示功能較少。</td>
+                            </tr>
+                            <tr>
+                                <td>中高情感性 × 中功能性 (右中)</td>
+                                <td>臺中文學館</td>
+                                <td>結合文學展覽與歷史建築，聚焦文學閱讀族群。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 分頁 4：概念提案與廣告執行 -->
+            <section id="tab-creative" class="page-tab">
+                <h2>捌、概念提案與廣告執行</h2>
+                
+                <h3>一、劇本大綱 (YouTuber 街訪探店)</h3>
+                <p>影片以兩位 YouTuber 前往國家漫畫博物館開場，透過街訪路人的方式，詢問對方為什麼選擇來國漫館。路人分享國漫館免門票、可以看漫畫、休息及拍照等特色，勾起 YouTuber 的好奇心，決定帶著觀眾一起深入探索。</p>
+
+                <h3>二、拾、附錄：創意聯想法</h3>
+                
+                <div class="quote-box">
+                    <h4>💡 腦力激盪法：張律師的反差辯護</h4>
+                    <p><strong>目標問題：</strong>如何利用影片拍出國漫館的優點吸引人群？</p>
+                    <p><strong>腳本內容：</strong>穿著西裝的張律師嚴肅敲下法槌，直視鏡頭指控大眾生活太無聊且低估了國家漫畫博物館。接著他將厚重法典翻開，裡頭其實是一本本漫畫，用荒謬的反差感展開辯護。他秀出國漫館所有空間美學與典藏手稿，最後激動地拋出「證物 C」——宣稱常設展竟然完全免費，是用零圓換取靈魂救贖的文化福利！</p>
+                </div>
+
+                <div class="quote-box">
+                    <h4>💡 隨機聯想法：AR 數位漫畫主角養成軟體</h4>
+                    <p><strong>目標問題：</strong>如何吸引群眾定期回訪國漫館？</p>
+                    <p><strong>腳本內容：</strong>民眾首次到館參觀時，可領取一個初始的「數位漫畫主角卵」初階角色。每次只要回到展館內掃描特定的 QR Code，就能幫助角色獲得經驗值、升級並解鎖全新造型或經典台詞，善用遊戲化心理驅使民眾主動定期回館打卡。</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- 頁尾 Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 老城裡的漫時光專案小組 | 作者：李友書（學號：D1422211 / 組別：乙四）| 國家漫畫博物館期中企劃網頁</p>
+    </footer>
+
+    <!-- 分頁切換 JS -->
+    <script>
+        function switchTab(event, tabId) {
+            event.preventDefault();
+            
+            // 隱藏所有分頁
+            const tabs = document.querySelectorAll('.page-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // 移除導覽列選取狀態
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            // 顯示目標分頁與設定高亮
+            document.getElementById('tab-' + tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
